@@ -1,5 +1,5 @@
 # Configuración de la URL y rutas
-urban_routes_url = 'https://cnt-aee45ca0-c2c9-479c-ae49-de0471d2812d.containerhub.tripleten-services.com?lng=es'
+urban_routes_url = 'https://cnt-6e9af0a4-f733-497e-acb0-7a0e00ec7657.containerhub.tripleten-services.com?lng=es'
 address_from = 'East 2nd Street, 601'
 address_to = '1300 1st St'
 # Datos del usuario
