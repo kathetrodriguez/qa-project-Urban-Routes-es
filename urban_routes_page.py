@@ -35,7 +35,7 @@ class UrbanRoutesPage:
     #Boton para pedir los helados
     add_ice_cream_button = (By.XPATH, "(//div[@class='r-counter-container']//div[@class='counter-plus'])[1]")
     #Boton para pedir el taxi
-    order_a_taxi = (By.CLASS_NAME, "smart-button-wrapper")
+    search_a_taxi = (By.CLASS_NAME, "smart-button-wrapper")
     #modal
     confirmation_information_driver = (By.XPATH, '//*[contains(text(), "El conductor llegará en")]')
 
@@ -161,8 +161,8 @@ class UrbanRoutesPage:
                                                        "(//div[@class='r-counter-container']//div[@class='counter-value'])[1]").text) == _ + 1
             )
 
-    def click_order_a_taxi(self):
-        self.driver.find_element(*self.order_a_taxi).click()
+    def book_a_taxi(self):
+        self.driver.find_element(*UrbanRoutesPage.search_a_taxi).click()
 
     def modal_to_search_taxi_appears(self):
         self.driver.find_element(*self.confirmation_information_driver)
