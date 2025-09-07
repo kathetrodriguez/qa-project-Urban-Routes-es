@@ -1,93 +1,69 @@
-# 🚕 Urban Routes - Automated Testing Suite
+🚕 Urban Routes – Proyecto de Pruebas Automatizadas
 
-Welcome! This repository contains an end-to-end automated testing project for the **Urban Routes** web app — GITfocused on browser automation with Selenium.
+Este proyecto contiene un conjunto de pruebas automáticas que validan cómo funciona la aplicación web Urban Routes, desde el momento en que un usuario pide un taxi hasta que se confirma el conductor asignado.
 
-These tests simulate a full taxi ordering experience, including UI interactions, service selection, credit card form handling, and driver assignment validation.
+El objetivo es simular la experiencia de un cliente real y verificar que todas las funciones clave de la app funcionan correctamente.
 
----
-urban-routes/
-├── data.py # Test data and helper utilities
-├── test_urban_routes.py # Main test suite
-├── urban_routes_page.py # Page Object Model (POM) for Urban Routes
-├── phone_code.py # Code interception utility for phone verification
-└── README.md # This file
+🎯 Objetivos del Proyecto
 
-## ✅ Features Covered
+General: Garantizar que la aplicación Urban Routes permita pedir un taxi sin errores y con una experiencia fluida para el usuario.
 
-This test suite walks through a real-world user scenario:
+Específicos:
 
-- From set pickup and destination addresses to  observe transition from search state to trip details.
+Validar que se puedan ingresar direcciones y elegir un tipo de servicio (ejemplo: tarifa Comfort).
 
-🛠 Requirements
+Verificar el proceso de agregar y confirmar una tarjeta de crédito.
 
-Python 3.8+
+Confirmar que los servicios adicionales (manta, pañuelos, helados) se soliciten correctamente.
 
-Selenium
+Asegurar que la app muestre la información del conductor una vez asignado.
 
-Pytest
+📂 Estructura del Proyecto
 
-Happy testing! 💻🧪
----
-# 🚕 Urban Routes - Pruebas Automatizadas 
+data.py → Datos de entrada usados en las pruebas.
 
-## 📁 Project Structure
+test_urban_routes.py → Archivo principal con las pruebas.
 
-Este repositorio contiene pruebas automatizadas para la aplicación Urban Routes. Las pruebas están diseñadas usando Selenium y validan el proceso completo de solicitud de un taxi, incluyendo la selección de servicios adicionales y la verificación del conductor asignado.
+urban_routes_page.py → Implementación del Page Object Model (estructura que organiza las pruebas).
 
-📂 Estructura del Repositorio
+phone_code.py → Función para simular el código de confirmación al agregar una tarjeta.
 
-urban-routes/
-│
-├── data.py             # Contiene datos de entrada y utilidades para las pruebas
-├── test_urban_routes.py             # Archivo principal con las pruebas automatizadas
-├── urban_routes_page.py   # Page Object Model para la página Urban Routes
-├── phone_code.py    # Herramienta necesaria para la ejecución
-└── README.md           # Este archivo
+README.md → Este documento explicativo.
 
-🚕 Funcionalidad Probada
+✅ Funcionalidades Probadas
 
-Las pruebas cubren el proceso completo de pedir un taxi en la app Urban Routes, incluyendo:
+Las pruebas simulan todo el proceso que haría un usuario real:
 
-Configurar la dirección.
+Configurar dirección de inicio y destino.
 
 Seleccionar la tarifa Comfort.
 
-Ingresar el número de teléfono.
+Ingresar número de teléfono.
 
-Agregar una tarjeta de crédito:
-
-Llenar campos de tarjeta.
-
-Simular pérdida de enfoque en el campo CVV para activar el botón de enlace.
-
-Utilizar la función retrieve_phone_code() para interceptar el código de confirmación.
+Agregar tarjeta de crédito y confirmar con código.
 
 Escribir un mensaje para el conductor.
 
-Solicitar servicios adicionales:
+Solicitar servicios adicionales (manta, pañuelos, helados).
 
-Manta y pañuelos.
+Confirmar el viaje.
 
-2 helados.
+Verificar que aparece la información del conductor asignado.
 
-Confirmar la solicitud del taxi.
+🚀 Cómo Ejecutar las Pruebas
 
-Verificar la aparición del conductor:
+Clonar el repositorio:
 
-Esperar la transición del modal de búsqueda a la información del viaje.
-
-🚀 Cómo Ejecutar
-
-Clona este repositorio:
-
-git clone https://github.com/tu_usuario/urban-routes.git
+git clone https://github.com/tu_usuario/urban-routes.git  
 cd urban-routes
 
-Instala las dependencias:
+
+Instalar dependencias:
 
 pip install -r requirements.txt
 
-Ejecuta las pruebas:
+
+Ejecutar las pruebas:
 
 pytest main.py
 
@@ -99,12 +75,8 @@ Selenium
 
 Pytest
 
-Webdriver (ChromeDriver, GeckoDriver, etc., según el navegador)
+WebDriver (ChromeDriver o GeckoDriver, según tu navegador)
 
-📌 Notas
+✍️ Autor
 
-Asegúrate de que el navegador y el WebDriver estén correctamente instalados y configurados.
-
-La función retrieve_phone_code() está diseñada para interceptar el código de confirmación necesario al agregar una tarjeta de crédito.
-
-En algunos elementos del formulario (como el CVV), es necesario simular el cambio de enfoque con TAB o un clic para activar botones relacionados.
+Proyecto desarrollado por Katherine Torres Rodríguez.
